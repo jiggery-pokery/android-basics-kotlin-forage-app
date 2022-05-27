@@ -93,7 +93,7 @@ class ForageableViewModel(
 //  creates a ForageableViewModel
 class ForageableViewModelViewFactory(
     private val forageableDao: ForageableDao
-) {
+): ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(ForageableViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
