@@ -36,14 +36,14 @@ interface ForageableDao {
     // TODO: implement a method to insert a Forageable into the database
     //  (use OnConflictStrategy.REPLACE)
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(forageable: Forageable)
+    suspend fun insert(forageable: Forageable)
 
     // TODO: implement a method to update a Forageable that is already in the database
     @Update
-    fun update(forageable: Forageable)
+    suspend fun update(forageable: Forageable)
 
     // TODO: implement a method to delete a Forageable from the database.
     @Delete
-    fun delete(forageable: Forageable)
+    suspend fun delete(forageable: Forageable)
 
 }

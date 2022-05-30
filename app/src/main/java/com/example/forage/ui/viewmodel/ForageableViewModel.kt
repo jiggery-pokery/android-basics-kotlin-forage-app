@@ -50,7 +50,7 @@ class ForageableViewModel(
             inSeason = inSeason,
             notes = notes
         )
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             forageableDao.insert(forageable)
         }
         // TODO: launch a coroutine and call the DAO method to add a Forageable to the database within it
